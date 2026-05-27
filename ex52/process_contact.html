@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Process Contact</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 50px;
+            }
+            .container {
+                max-width: 500px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .info {
+                margin: 10px 0;
+                padding: 10px;
+                background-color: #f0f0f0;
+                border-left: 4px solid #007bff;
+            }
+            .label {
+                font-weight: bold;
+                color: #333;
+            }
+            .value {
+                color: #007bff;
+                margin-left: 10px;
+            }
+            a {
+                margin-top: 20px;
+                display: inline-block;
+                padding: 10px 15px;
+                background-color: #007bff;
+                color: white;
+                text-decoration: none;
+                border-radius: 3px;
+            }
+            a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="info">
+                <span class="label">Full Name:</span>
+                <span class="value" id="fullname"></span>
+            </div>
+            <div class="info">
+                <span class="label">Email:</span>
+                <span class="value" id="email"></span>
+            </div>
+            <div class="info">
+                <span class="label">Send To:</span>
+                <span class="value" id="sendto"></span>
+            </div>
+            <div class="info">
+                <span class="label">Title:</span>
+                <span class="value" id="title"></span>
+            </div>
+            <div class="info">
+                <span class="label">Message:</span>
+                <span class="value" id="content"></span>
+            </div>
+            <a href="contactpage.html">Back to Contact Page</a>
+        </div>
+
+        <script>
+            // Lấy URL query string
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Lấy giá trị các trường
+            const fullname = urlParams.get('fullname');
+            const email = urlParams.get('email');
+            const sendto = urlParams.get('sendto');
+            const title = urlParams.get('title');
+            const content = urlParams.get('content');
+            
+            // Hiển thị dữ liệu
+            document.getElementById('fullname').textContent = fullname || 'Not provided';
+            document.getElementById('email').textContent = email || 'Not provided';
+            document.getElementById('sendto').textContent = sendto || 'Not provided';
+            document.getElementById('title').textContent = title || 'Not provided';
+            document.getElementById('content').textContent = content || 'Not provided';
+        </script>
+    </body>
+</html>

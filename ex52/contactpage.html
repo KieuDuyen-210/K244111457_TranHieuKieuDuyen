@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title> Ex52 </title>
+    </head>
+    <body>
+        <h3>Contact the editorial office</h3>
+        <form 
+        name="contactform" 
+        method="get"
+        action="process_contact.html"
+        target="_blank">
+        <table>
+            <tr>
+                <td colspan="4"><label for="fullname">Full name:</label></td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="text" id="fullname" name="fullname"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email"></td>
+                <td><label for="sendto">Send to:</label></td>
+                <td>
+                    <select id="sendto" name="sendto">
+                        <option value="editorialboard">Editorial Board</option>
+                        <option value="newsdepartment">News Department</option>
+                        <option value="boardofperspectives">Board of Perspectives</option>
+                        <option value="worldboard">World Board</option>
+                        <option value="businessdepartment">Business Department</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><label for="title">Title:</label></td>
+            </tr>
+            <tr>
+                <td colspan="4"><input type="text" id="title" name="title"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><label for="content">Message:</label></td>
+            </tr>
+            <tr>
+                <td colspan="4"><textarea id="content" name="content"></textarea></td>
+            </tr>
+        </table> 
+        <input type="submit" value="Send" style="background-color:rgb(120, 15, 57); color:white;">
+        </form>
+    </body>
+</html>

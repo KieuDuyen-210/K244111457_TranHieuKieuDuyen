@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Exercise 51</title>
+        <style>
+            body {
+                background-color: #128582;
+                color: white;
+                padding: 10px;
+            }
+            .form-section {
+                margin-bottom: 15px;
+                color: white;
+            }
+            textarea {
+                width: 400px;
+                height: 80px;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Logo.gif" alt="Logo" style="display: block; margin: 0 auto;">
+        
+        <h2 style="text-align: center;">Newborn Registration</h2>
+        <form>
+            <div class="form-section">
+                <label for="Date">Date</label>           
+                <input type="date" name="Date" id="Date">
+            </div>
+
+
+            <div class="form-section">
+                <label for="infantFirstName">1) Infant's First Name:</label>
+                <input type="text" name="infantFirstName" id="infantFirstName">
+                &nbsp;&nbsp;&nbsp; <label for="infantLastName">Last Name:</label>
+                <input type="text" name="infantLastName" id="infantLastName">
+            </div>
+
+            <div class="form-section">
+                <label for="MedicalRecordNumber">2) Medical Record Number:</label>
+                <input type="text" name="MedicalRecordNumber" id="MedicalRecordNumber">
+            </div>
+
+            <div class="form-section">
+                <label for="dob">3) Date of Birth:</label>
+                <input type="date" name="dob" id="dob">
+            </div>
+
+            <div class="form-section">
+                <label for="birthweight">4) Birth Weight:</label>
+                <input type="number" name="birthweight" id="birthweight">
+            </div>
+
+            <div class="form-section">
+                <label for="APGARscore">5) APGAR Score:</label>
+                <input type="number" name="APGARscore" id="APGARscore">
+            </div>
+
+            <div class="form-section">
+                <label for="motherFirstName">6) Mother's First Name:</label>
+                <input type="text" name="motherFirstName" id="motherFirstName">
+                &nbsp;&nbsp;&nbsp; <label for="motherLastName">Last Name:</label>
+                <input type="text" name="motherLastName" id="motherLastName">
+            </div>
+
+            <div class="form-section">
+                <label for="fatherFirstName">7) Father's First Name:</label>
+                <input type="text" name="fatherFirstName" id="fatherFirstName">
+                &nbsp;&nbsp;&nbsp; <label for="fatherLastName">Last Name:</label>
+                <input type="text" name="fatherLastName" id="fatherLastName">
+            </div>
+
+            <div>
+                <label for="Physician">8) Physician (check all that apply):</label>
+                <select>
+                    <option value="Dr.Warren Albert">Dr.Warren Albert</option>
+                    <option value="Dr.Maria Alvarez">Dr. Maria Alvarez</option>
+                    <option value="Dr. Karen Brinkman">Dr. Karen Brinkman</option>
+                    <option value="Dr.Micheal Kerry">Dr. Micheal Kerry</option>
+                </select>
+            </div>
+
+            <div class="form-section" style="text-align: center;">
+                <input type="submit" value="Register">
+                <input type="reset" value="Cancel">
+            </div>
+        </form>
+    </body>
+</html>

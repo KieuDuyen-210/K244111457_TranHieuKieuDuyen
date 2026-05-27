@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Exercise 50</title>
+        <style>
+            body {
+                background-color: #ccffff;
+
+                padding: 10px;
+            }
+            .form-section {
+                margin-bottom: 15px;
+            }
+            textarea {
+                width: 400px;
+                height: 80px;
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/DeLong.jpg" alt="DeLong Enterprises" style="display: block; margin: 0 auto;">
+        
+        <h2>Travel Expense Report</h2>
+        <hr>
+
+        <form>
+            <div class="form-section">
+                <label for="firstName">1) First Name:</label>               
+                <input type="text" name="firstName" id="firstName">
+                &nbsp;&nbsp;&nbsp; <label for="lastName">Last Name:</label> 
+                <input type="text" name="lastName" id="lastName">
+            </div>
+
+            <div class="form-section">
+                <label for="SocialSecurityNumber">2) Social Security Number:</label> 
+                <input type="text" name="SocialSecurityNumber" id="SocialSecurityNumber" size="15">
+            </div>
+
+            <div class="form-section">
+                <label for="department">3) Department:</label>
+                <select name="department" id="department">
+                    <option value="Accounting">Accounting</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Human Resources">Human Resources</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label for="purposeoftrip">4) Describe the purpose of your trip.</label><br>
+                <textarea id="purposeoftrip" name="purposeoftrip"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label>5) Itemize your travel expenses</label><br>
+                <table class="expense-table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="date1" value="mm/dd/yy" size="10"></td>
+                        <td><input type="text" name="desc1" size="30"></td>
+                        <td>
+                            <select name="cat1">
+                                <option value="Meal">Meal</option>
+                                <option value="Airfare">Airfare</option>
+                                <option value="Lodging">Lodging</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amt1" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="date2" value="mm/dd/yy" size="10"></td>
+                        <td><input type="text" name="desc2" size="30"></td>
+                        <td>
+                            <select name="cat2">
+                                <option value="Meal">Meal</option>
+                                <option value="Airfare">Airfare</option>
+                                <option value="Lodging">Lodging</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amt2" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="date3" value="mm/dd/yy" size="10"></td>
+                        <td><input type="text" name="desc3" size="30"></td>
+                        <td>
+                            <select name="cat3">
+                                <option value="Meal">Meal</option>
+                                <option value="Airfare">Airfare</option>
+                                <option value="Lodging">Lodging</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amt3" size="8"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="date4" value="mm/dd/yy" size="10"></td>
+                        <td><input type="text" name="desc4" size="30"></td>
+                        <td>
+                            <select name="cat4">
+                                <option value="Meal">Meal</option>
+                                <option value="Airfare">Airfare</option>
+                                <option value="Lodging">Lodging</option>
+                            </select>
+                        </td>
+                        <td><input type="text" name="amt4" size="8"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <label>6) Have you submitted your receipts?</label>
+                <input type="radio" id="yes" name="submitted" value="yes"> <label for="yes">Yes</label>
+                <input type="radio" id="no" name="submitted" value="no"> <label for="no">No</label> </div>
+
+            <div class="form-section">
+                <input type="submit" value="Submit travel expenses" onclick="return confirm('Bạn có chắc chắn muốn gửi không?')">
+                <input type="reset" value="Reset">
+            </div>
+
+            <p>Questions? Contact Debbie Larson in Accounting (ext. 2150).</p>
+        </form>
+    </body>
+</html>

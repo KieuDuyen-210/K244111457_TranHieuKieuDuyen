@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title> GPA Calculation </title>
+        <script>
+
+            function calculateGPA() 
+            {
+                selectedCourse = document.getElementById("courseSelect").value;
+                
+                QT=eval(myform.QT.value);
+                GK=eval(myform.GK.value);
+                CK=eval(myform.CK.value);
+                T=eval(myform.T.value);
+
+                if (selectedCourse === "Course 3") 
+                {
+                    gpa = (QT * 0.15 + GK * 0.2 + T * 0.15 + CK * 0.5);
+                    gpaResult.innerHTML = gpa.toFixed(2);
+                }
+                if (selectedCourse === "Course 1") 
+                {
+                    gpa = (QT * 0.3 + GK * 0.2 + CK * 0.5);
+                    gpaResult.innerHTML = gpa.toFixed(2);
+                }
+                else
+                {
+                    gpa = (QT * 0.25 + GK * 0.25 + CK * 0.5);
+                    gpaResult.innerHTML = gpa.toFixed(2);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="text-align: center;">GPA Calculation</h1>
+        <form name="myform">
+            <table>
+                <tr>
+                    <td> Select course:</td>
+                    <td>
+                        <select id="courseSelect" name="course">
+                            <option>Course 1</option>
+                            <option>Course 2</option>
+                            <option>Course 3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quá Trình:</td>
+                    <td><input type="text" name="QT" id="QT"></td>
+                </tr>
+                <tr>
+                    <td>Giữa Kỳ:</td>
+                    <td><input type="text" name="GK" id="GK"></td>
+                </tr>
+                <tr>
+                    <td>Cuối Kỳ:</td>
+                    <td><input type="text" name="CK" id="CK"></td>
+                </tr>
+                <tr>
+                    <td>Điểm T:</td>
+                    <td><input type="text" name="T" id="T"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Calculate GPA" onclick="calculateGPA()"></td>
+                </tr>
+                <tr>
+                    <td>GPA:</td>
+                    <td id="gpaResult"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

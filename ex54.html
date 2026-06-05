@@ -18,12 +18,14 @@
             }
             function sina() {
                 var a = parseFloat(myform.a.value);
-                var result = Math.sin(a);
+                var radians = a * (Math.PI / 180);
+                var result = Math.sin(radians);
                 document.getElementById("result").value = result;
             }
             function cosa() {
                 var a = parseFloat(myform.a.value);
-                var result = Math.cos(a);
+                var radians = a * (Math.PI / 180);
+                var result = Math.cos(radians);
                 document.getElementById("result").value = result;
             }
             function luythua() {

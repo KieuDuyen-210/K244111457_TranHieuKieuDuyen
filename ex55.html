@@ -6,16 +6,26 @@
                 var a = parseFloat(quadratic_equation.a.value);
                 var b = parseFloat(quadratic_equation.b.value);
                 var c = parseFloat(quadratic_equation.c.value);
-                var delta = b * b - 4 * a * c;
-                if (delta < 0) {
-                    document.getElementById("result").value = "No solution";
-                } else if (delta == 0) {
-                    var x = -b / (2 * a);
-                    document.getElementById("result").value = "One solution: x = " + x;
+                
+                if (a == 0) {
+                    if (b == 0) {
+                        document.getElementById("result").value = "No solution";
+                    } else {
+                        var x = -c / b;
+                        document.getElementById("result").value = " x = " + x;
+                    }
                 } else {
-                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
-                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
-                    document.getElementById("result").value = "x1 = " + x1 + "; x2 = " + x2;
+                    var delta = b * b - 4 * a * c;
+                    if (delta < 0) {
+                        document.getElementById("result").value = "No real solution";
+                    } else if (delta == 0) {
+                        var x = -b / (2 * a);
+                        document.getElementById("result").value = "One solution: x = " + x;
+                    } else {
+                        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                        document.getElementById("result").value = "x1 = " + x1 + "; x2 = " + x2;
+                    }
                 }
             }
 

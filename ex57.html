@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title> EX57 </title>
+        <script>
+            function calculateItemTotal(qtyName, price, totalName) {
+                var qty = parseFloat(document.getElementsByName(qtyName)[0].value);
+                var total = qty * price;
+                document.getElementsByName(totalName)[0].value = total.toFixed(2);
+            }
+            function calculateTotal() {
+                var total1 = parseFloat(document.getElementsByName("total1")[0].value) || 0;
+                var total2 = parseFloat(document.getElementsByName("total2")[0].value) || 0;
+                var total3 = parseFloat(document.getElementsByName("total3")[0].value) || 0;
+                var grandTotal = total1 + total2 + total3;
+                document.getElementById("grandTotal").value = grandTotal.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <table>
+                <tr style="font-weight: bold;">
+                    <td>Part Number</td>
+                    <td>Description</td>
+                    <td>Price</td>
+                    <td>Qty</td>
+                    <td>Item Total</td>
+                </tr>
+                <tr>
+                    <td>C112</td>
+                    <td>Mouse</td>
+                    <td>19.95$</td>
+                    <td><input type="number" name="qty1" onchange="calculateItemTotal('qty1', 19.95, 'total1')"></td>
+                    <td><input type="text" name="total1" id="total1" readonly></td>
+                </tr>
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95$</td>
+                    <td><input type="number" name="qty2" onchange="calculateItemTotal('qty2', 29.95, 'total2')"></td>
+                    <td><input type="text" name="total2" id="total2" readonly></td>
+                </tr>
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95$</td>
+                    <td><input type="number" name="qty3" onchange="calculateItemTotal('qty3', 39.95, 'total3')"></td>
+                    <td><input type="text" name="total3" id="total3" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="4";style="text-align: right;">Grand Total</td>
+                    <td><input type="text" name="grandTotal" id="grandTotal"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"; style="text-align: right;">
+                    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

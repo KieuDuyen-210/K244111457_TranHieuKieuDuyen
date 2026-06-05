@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title> EX54 </title>
+        <script>
+            function max() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var c = parseFloat(myform.c.value);
+                var result = Math.max(a, b, c);
+                document.getElementById("result").value = result;
+            }
+            function min() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var c = parseFloat(myform.c.value);
+                var result = Math.min(a, b, c);
+                document.getElementById("result").value = result;
+            }
+            function sina() {
+                var a = parseFloat(myform.a.value);
+                var result = Math.sin(a);
+                document.getElementById("result").value = result;
+            }
+            function cosa() {
+                var a = parseFloat(myform.a.value);
+                var result = Math.cos(a);
+                document.getElementById("result").value = result;
+            }
+            function luythua() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var result = Math.pow(a, b);
+                document.getElementById("result").value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+            <table border="1">
+                <tr>
+                    <td>a:</td>
+                    <td><input type="number" name="a"></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="number" name="b"></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="number" name="c"></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td><input type="text" name="result" id="result" readonly></td>
+                </tr>
+            </table>
+            <button type="button" onclick="max()">MAX</button>
+            <button type="button" onclick="min()">MIN</button>
+            <button type="button" onclick="sina()">Sin(a)</button>
+            <button type="button" onclick="cosa()">Cos(a)</button>
+            <button type="button" onclick="luythua()">a^b</button>
+        </form>
+    </body>
+</html>

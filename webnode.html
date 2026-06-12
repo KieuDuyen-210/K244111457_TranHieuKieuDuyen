@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Design Web Node</title>
+        <script>
+        function addNode() {
+            var content = document.getElementById("addContent").value;
+            var position = parseInt(document.getElementById("addPosition").value);
+            
+            if (content === "") {
+                alert("Please enter content");
+                return;
+            }
+            
+            var nodeList = document.getElementById("nodeList");
+            var newLi = document.createElement("li");
+            newLi.textContent = content;
+            
+            if (position < 0 || position > nodeList.children.length) {
+                nodeList.appendChild(newLi);
+            } else {
+                nodeList.insertBefore(newLi, nodeList.children[position]);
+            }
+            
+            document.getElementById("addContent").value = "";
+            document.getElementById("addPosition").value = "0";
+        }
+        
+        function removeNode() {
+            var position = parseInt(document.getElementById("addPosition").value);
+            var nodeList = document.getElementById("nodeList");
+            
+            if (position < 0 || position >= nodeList.children.length) {
+                alert("Invalid position");
+                return;
+            }
+            
+            nodeList.children[position].remove();
+        }
+        
+        function modifyNode() {
+            var newContent = document.getElementById("modifyContent").value;
+            var position = parseInt(document.getElementById("modifyPosition").value);
+            
+            if (newContent === "") {
+                alert("Please enter new content");
+                return;
+            }
+            
+            var nodeList = document.getElementById("nodeList");
+            
+            if (position < 0 || position >= nodeList.children.length) {
+                alert("Invalid position");
+                return;
+            }
+            
+            nodeList.children[position].textContent = newContent;
+            document.getElementById("modifyContent").value = "";
+            document.getElementById("modifyPosition").value = "0";
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <button type="button" onclick="addNode()">Add node</button> 
+                </td>
+                <td>Content:</td>
+                <td><input type="text" id="addContent"></td>
+                <td>Position:</td>
+                <td><input type="number" id="addPosition" value="0"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="removeNode()">Remove node</button> 
+                </td>
+                <td colspan="4">Position: <input type="number" id="addPosition" value="0" style="text-align: right;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" onclick="modifyNode()">Modify node</button> 
+                </td>
+                <td>New content:</td>
+                <td><input type="text" id="modifyContent"></td>
+                <td>Position:</td>
+                <td><input type="number" id="modifyPosition" value="0"></td>
+            </tr>
+        </table>
+        <h3> Web list </h3>
+        <ul id="nodeList">
+            <li>Database</li>
+            <li>Web1</li>
+            <li>Web2</li>
+        </ul>
+    </form>
+</body>
+</html>

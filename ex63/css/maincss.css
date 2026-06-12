@@ -1,0 +1,106 @@
+body {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1 {
+    text-align: left;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+hr {
+    border: none;
+    border-top: 2px solid #333;
+    margin: 20px 0;
+}
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+input[type="text"],
+select {
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+input[type="text"] {
+    width: 200px;
+}
+select {
+    width: 60px;
+}
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.radio-inline,
+.checkbox-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0;
+}
+.color-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 20px;
+}
+.color-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.color-sample {
+    width: 60px;
+    padding: 3px 8px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    text-align: center;
+}
+.blue { background-color: blue; }
+.red { background-color: red; }
+.yellow { background-color: yellow; color: black; }
+.green { background-color: green; }
+.violet { background-color: violet; }
+
+button {
+    padding: 8px 20px;
+    margin-right: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+th {
+    background-color: #0000ff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+td {
+    padding: 8px;
+}
+tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+tbody tr:hover {
+    background-color: #e0e0e0;
+}

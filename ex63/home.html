@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Member Registration</title>
+    <link rel="stylesheet" href="css/maincss.css">
+    <script src="js/dataset.js"></script>
+    <script src="js/mainjs.js"></script>
+</head>
+<body>
+    <h1>Member Registration</h1>
+    <hr>
+    
+    <form name="memberForm">
+        <table class="formTable">
+            <tr>
+                <td>Name<span>(*)</span></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            
+            <tr>
+                <td>Birthday<span>(*)</span></td>
+                <td>
+                    Day: <select name="day" id="day">
+                        <script>
+                            for(let i=1; i<=31; i++) {
+                                document.write('<option value="' + (i<10 ? '0'+i : i) + '">' + (i<10 ? '0'+i : i) + '</option>');
+                            }
+                        </script>
+                    </select>
+                    Month: <select name="month" id="month">
+                        <script>
+                            for(let i=1; i<=12; i++) {
+                                document.write('<option value="' + (i<10 ? '0'+i : i) + '">' + (i<10 ? '0'+i : i) + '</option>');
+                            }
+                        </script>
+                    </select>
+                    Year: <select name="year" id="year">
+                        <script>
+                            for(let i=1970; i<=2010; i++) {
+                                document.write('<option value="' + i + '">' + i + '</option>');
+                            }
+                        </script>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Gender<span>(*)</span></td>
+                <td>
+                    <input type="radio" name="gender" value="Man">
+                    <span>Man</span>
+                    <input type="radio" name="gender" value="Woman">
+                    <span>Woman</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Email<span>(*)</span></td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            
+            <tr>
+                <td>Your favorite:</td>
+                <td>
+                    <div class="checkbox-group">
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="hobbies" value="Shopping">
+                            <span>Shopping</span>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="hobbies" value="Tourism">
+                            <span>Tourism</span>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="hobbies" value="Chat">
+                            <span>Chat</span>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="hobbies" value="Read a book">
+                            <span>Read a book</span>
+                        </div>
+                        <div class="checkbox-inline">
+                            <input type="checkbox" name="hobbies" value="Listening to music">
+                            <span>Listening to music</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Your favorite color:</td>
+                <td>
+                    <div class="color-options">
+                        <div class="color-option">
+                            <input type="radio" name="color" value="Blue">
+                            <div class="color-sample blue">Blue</div>
+                        </div>
+                        <div class="color-option">
+                            <input type="radio" name="color" value="Red">
+                            <div class="color-sample red">Red</div>
+                        </div>
+                        <div class="color-option">
+                            <input type="radio" name="color" value="Yellow">
+                            <div class="color-sample yellow">Yellow</div>
+                        </div>
+                        <div class="color-option">
+                            <input type="radio" name="color" value="Green">
+                            <div class="color-sample green">Green</div>
+                        </div>
+                        <div class="color-option">
+                            <input type="radio" name="color" value="Violet">
+                            <div class="color-sample violet">Violet</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="button" onclick="registerMember()">Sign up</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <table id="memberTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Birthday</th>
+                <th>Hobbies</th>
+                <th>Colors</th>
+            </tr>
+        </thead>
+        <tbody id="memberBody">
+        </tbody>
+    </table>
+    
+</body>
+</html>

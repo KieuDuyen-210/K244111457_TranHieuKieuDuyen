@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Student Detail</title>
+        <script src="js/mainjs.js"></script>
+    </head>
+    <body>
+        <div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th colspan="2">Student Information</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Student ID:</td>
+                        <td id="student-id"></td>
+                    </tr>
+                    <tr>
+                        <td>Student Name:</td>
+                        <td id="student-name"></td>
+                    </tr>
+                    <tr>
+                        <td>Birthday:</td>
+                        <td id="student-birthday"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td id="student-gender"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            display_student_detail_from_url("datasets/students.xml")
+        </script>
+    </body>
+</html>

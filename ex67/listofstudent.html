@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Ex67</title>
+        <style>
+            @import url(css/maincss.css);
+        </style>
+       <script src="js/mainjs.js"></script>
+
+    </head>
+    <body>       
+        <table>
+            <thead>
+                <tr class="table-title">
+                    <th colspan="4">
+                        List of students
+                    </th>
+                </tr>
+                <tr class="table-header">
+                    <th>
+                        Student ID
+                    </th>
+                    <th>
+                        Student Name
+                    </th>
+                    <th>
+                        Birthday
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="bodystudent">
+
+            </tbody>
+        </table>
+        <script>            
+            bodystudent=document.getElementById("bodystudent")
+            dataset_path="datasets/students.xml"
+            //gọi AJAX sau
+            load_student_from_xml(dataset_path,bodystudent)
+        </script>
+    </body>
+</html>

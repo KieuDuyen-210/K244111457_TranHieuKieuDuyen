@@ -1,0 +1,15 @@
+#employeeTable {
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#employeeTable th, #employeeTable td {
+    border: 1px solid #999;
+    padding: 6px;
+    text-align: left;
+}
+
+#employeeTable th {
+    background-color: #3f7a3f;
+    color: white;
+}

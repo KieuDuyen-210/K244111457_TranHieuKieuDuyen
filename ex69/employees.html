@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Ex69
+        </title>
+        <link rel="stylesheet" href="css/maincss.css">
+    </head>
+    <body onload="load_employees()">
+        
+        
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Title:</th>
+                    <th colspan="2">
+                        <select id="titleSelect" onchange="show_employees_by_title()">
+                        <option value="">-- Select title --</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="employeeBody"></tbody>
+        </table>
+        <script src="js/mainjs.js"></script>
+    </body>
+</html>
